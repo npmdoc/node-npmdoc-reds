@@ -1,0 +1,1662 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/visionmedia/reds">reds (v0.2.5)</a>
+</h1>
+<h4>Redis search for node.js</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds">module reds</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Query">
+            function <span class="apidocSignatureSpan">reds.</span>Query
+            <span class="apidocSignatureSpan">(str, search)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.between">
+            function <span class="apidocSignatureSpan">reds.</span>Query.prototype.between
+            <span class="apidocSignatureSpan">(start, stop)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.end">
+            function <span class="apidocSignatureSpan">reds.</span>Query.prototype.end
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.type">
+            function <span class="apidocSignatureSpan">reds.</span>Query.prototype.type
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Search">
+            function <span class="apidocSignatureSpan">reds.</span>Search
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.index">
+            function <span class="apidocSignatureSpan">reds.</span>Search.prototype.index
+            <span class="apidocSignatureSpan">(str, id, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.query">
+            function <span class="apidocSignatureSpan">reds.</span>Search.prototype.query
+            <span class="apidocSignatureSpan">(query)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.remove">
+            function <span class="apidocSignatureSpan">reds.</span>Search.prototype.remove
+            <span class="apidocSignatureSpan">(id, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.countWords">
+            function <span class="apidocSignatureSpan">reds.</span>countWords
+            <span class="apidocSignatureSpan">(words)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.createClient">
+            function <span class="apidocSignatureSpan">reds.</span>createClient
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.createSearch">
+            function <span class="apidocSignatureSpan">reds.</span>createSearch
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.metaphoneArray">
+            function <span class="apidocSignatureSpan">reds.</span>metaphoneArray
+            <span class="apidocSignatureSpan">(words)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.metaphoneKeys">
+            function <span class="apidocSignatureSpan">reds.</span>metaphoneKeys
+            <span class="apidocSignatureSpan">(key, words)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.metaphoneMap">
+            function <span class="apidocSignatureSpan">reds.</span>metaphoneMap
+            <span class="apidocSignatureSpan">(words)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.stem">
+            function <span class="apidocSignatureSpan">reds.</span>stem
+            <span class="apidocSignatureSpan">(words)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.stripStopWords">
+            function <span class="apidocSignatureSpan">reds.</span>stripStopWords
+            <span class="apidocSignatureSpan">(words)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.words">
+            function <span class="apidocSignatureSpan">reds.</span>words
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">reds.</span>Query.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">reds.</span>Search.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">reds.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Query">module reds.Query</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.Query">
+            function <span class="apidocSignatureSpan">reds.</span>Query
+            <span class="apidocSignatureSpan">(str, search)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Query.prototype">module reds.Query.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.between">
+            function <span class="apidocSignatureSpan">reds.Query.prototype.</span>between
+            <span class="apidocSignatureSpan">(start, stop)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.end">
+            function <span class="apidocSignatureSpan">reds.Query.prototype.</span>end
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.type">
+            function <span class="apidocSignatureSpan">reds.Query.prototype.</span>type
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Query.prototype.between">module reds.Query.prototype.between</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.between.between">
+            function <span class="apidocSignatureSpan">reds.Query.prototype.</span>between
+            <span class="apidocSignatureSpan">(start, stop)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Query.prototype.end">module reds.Query.prototype.end</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.end.end">
+            function <span class="apidocSignatureSpan">reds.Query.prototype.</span>end
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Query.prototype.type">module reds.Query.prototype.type</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.type.type">
+            function <span class="apidocSignatureSpan">reds.Query.prototype.</span>type
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Search">module reds.Search</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.Search">
+            function <span class="apidocSignatureSpan">reds.</span>Search
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Search.prototype">module reds.Search.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.index">
+            function <span class="apidocSignatureSpan">reds.Search.prototype.</span>index
+            <span class="apidocSignatureSpan">(str, id, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.query">
+            function <span class="apidocSignatureSpan">reds.Search.prototype.</span>query
+            <span class="apidocSignatureSpan">(query)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.remove">
+            function <span class="apidocSignatureSpan">reds.Search.prototype.</span>remove
+            <span class="apidocSignatureSpan">(id, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Search.prototype.index">module reds.Search.prototype.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.index.index">
+            function <span class="apidocSignatureSpan">reds.Search.prototype.</span>index
+            <span class="apidocSignatureSpan">(str, id, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Search.prototype.query">module reds.Search.prototype.query</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.query.query">
+            function <span class="apidocSignatureSpan">reds.Search.prototype.</span>query
+            <span class="apidocSignatureSpan">(query)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Search.prototype.remove">module reds.Search.prototype.remove</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.remove.remove">
+            function <span class="apidocSignatureSpan">reds.Search.prototype.</span>remove
+            <span class="apidocSignatureSpan">(id, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.countWords">module reds.countWords</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.countWords.countWords">
+            function <span class="apidocSignatureSpan">reds.</span>countWords
+            <span class="apidocSignatureSpan">(words)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.createClient">module reds.createClient</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.createClient.createClient">
+            function <span class="apidocSignatureSpan">reds.</span>createClient
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.createSearch">module reds.createSearch</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.createSearch.createSearch">
+            function <span class="apidocSignatureSpan">reds.</span>createSearch
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.metaphoneArray">module reds.metaphoneArray</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.metaphoneArray.metaphoneArray">
+            function <span class="apidocSignatureSpan">reds.</span>metaphoneArray
+            <span class="apidocSignatureSpan">(words)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.metaphoneKeys">module reds.metaphoneKeys</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.metaphoneKeys.metaphoneKeys">
+            function <span class="apidocSignatureSpan">reds.</span>metaphoneKeys
+            <span class="apidocSignatureSpan">(key, words)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.metaphoneMap">module reds.metaphoneMap</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.metaphoneMap.metaphoneMap">
+            function <span class="apidocSignatureSpan">reds.</span>metaphoneMap
+            <span class="apidocSignatureSpan">(words)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.stem">module reds.stem</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.stem.stem">
+            function <span class="apidocSignatureSpan">reds.</span>stem
+            <span class="apidocSignatureSpan">(words)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.stripStopWords">module reds.stripStopWords</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.stripStopWords.stripStopWords">
+            function <span class="apidocSignatureSpan">reds.</span>stripStopWords
+            <span class="apidocSignatureSpan">(words)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.words">module reds.words</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.words.words">
+            function <span class="apidocSignatureSpan">reds.</span>words
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds" id="apidoc.module.reds">module reds</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Query" id="apidoc.element.reds.Query">
+        function <span class="apidocSignatureSpan">reds.</span>Query
+        <span class="apidocSignatureSpan">(str, search)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Query(str, search) {
+  this.str = str;
+  this.type('and');
+  this.search = search;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Query.prototype.between" id="apidoc.element.reds.Query.prototype.between">
+        function <span class="apidocSignatureSpan">reds.</span>Query.prototype.between
+        <span class="apidocSignatureSpan">(start, stop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Query.prototype.between = function (start, stop){
+  this._start = start;
+  this._stop = stop;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Query.prototype.end" id="apidoc.element.reds.Query.prototype.end">
+        function <span class="apidocSignatureSpan">reds.</span>Query.prototype.end
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Query.prototype.end = function (fn){
+  var key = this.search.key;
+  var db = this.search.client;
+  var query = this.str;
+  var words = exports.stem(exports.stripStopWords(exports.words(query)));
+  var keys = exports.metaphoneKeys(key, words);
+  var type = this._type;
+  var start = this._start || 0;
+  var stop = this._stop || -1;
+
+  if (!keys.length) return fn(null, []);
+
+  var tkey = key + 'tmpkey';
+  db.multi([
+    [type, tkey, keys.length].concat(keys),
+    ['zrevrange', tkey, start, stop],
+    ['zremrangebyrank', tkey, start, stop],
+  ]).exec(function(err, ids) {
+    ids = ids[1];
+    fn(err, ids);
+  });
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Query.prototype.type" id="apidoc.element.reds.Query.prototype.type">
+        function <span class="apidocSignatureSpan">reds.</span>Query.prototype.type
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Query.prototype.type = function (type){
+  this._type = types[type];
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Search" id="apidoc.element.reds.Search">
+        function <span class="apidocSignatureSpan">reds.</span>Search
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Search(key) {
+  this.key = key;
+  this.client = exports.createClient();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Search.prototype.index" id="apidoc.element.reds.Search.prototype.index">
+        function <span class="apidocSignatureSpan">reds.</span>Search.prototype.index
+        <span class="apidocSignatureSpan">(str, id, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Search.prototype.index = function (str, id, fn){
+  var key = this.key;
+  var db = this.client;
+  var words = exports.stem(exports.stripStopWords(exports.words(str)));
+  var counts = exports.countWords(words);
+  var map = exports.metaphoneMap(words);
+  var keys = Object.keys(map);
+
+  var cmds = [];
+  keys.forEach(function(word, i){
+    cmds.push(['zadd', key + ':word:' + map[word], counts[word], id]);
+    cmds.push(['zadd', key + ':object:' + id, counts[word], map[word]]);
+  });
+  db.multi(cmds).exec(fn || noop);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Search.prototype.query" id="apidoc.element.reds.Search.prototype.query">
+        function <span class="apidocSignatureSpan">reds.</span>Search.prototype.query
+        <span class="apidocSignatureSpan">(query)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Search.prototype.query = function (query){
+  return new Query(query, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Search.prototype.remove" id="apidoc.element.reds.Search.prototype.remove">
+        function <span class="apidocSignatureSpan">reds.</span>Search.prototype.remove
+        <span class="apidocSignatureSpan">(id, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Search.prototype.remove = function (id, fn){
+  fn = fn || noop;
+  var key = this.key;
+  var db = this.client;
+
+  db.zrevrangebyscore(key + ':object:' + id, '+inf', 0, function(err, constants){
+    if (err) return fn(err);
+    var multi = db.multi().del(key + ':object:' + id);
+    constants.forEach(function(c){
+      multi.zrem(key + ':word:' + c, id);
+    });
+    multi.exec(fn);
+  });
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.countWords" id="apidoc.element.reds.countWords">
+        function <span class="apidocSignatureSpan">reds.</span>countWords
+        <span class="apidocSignatureSpan">(words)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">countWords = function (words){
+  var obj = {};
+  if (!words) return obj;
+  for (var i = 0, len = words.length; i &lt; len; ++i) {
+    obj[words[i]] = (obj[words[i]] || 0) + 1;
+  }
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.createClient" id="apidoc.element.reds.createClient">
+        function <span class="apidocSignatureSpan">reds.</span>createClient
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createClient = function (){
+  return exports.client
+    || (exports.client = redis.createClient());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.createSearch" id="apidoc.element.reds.createSearch">
+        function <span class="apidocSignatureSpan">reds.</span>createSearch
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createSearch = function (key){
+  if (!key) throw new Error('createSearch() requires a redis key for namespacing');
+  return new Search(key);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+      $ npm install reds
+
+## Example
+
+The first thing you'll want to do is create a `Search` instance, which allows you to pass a `key`, used for namespacing within
+ Redis so that you may have several searches in the same db.
+
+    var search = reds.<span class="apidocCodeKeywordSpan">createSearch</span>('pets');
+
+ reds acts against arbitrary numeric or string based ids, so you could utilize this library with essentially anything you wish,
+even combining data stores. The following example just uses an array for our "database", containing some strings, which
+ we add to reds by calling `Search#index()` padding the body of text and an id of some kind, in this case the index.
+
+```js
+var strs = [];
+strs.push('Tobi wants four dollars');
+strs.push('Tobi only wants $4');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.metaphoneArray" id="apidoc.element.reds.metaphoneArray">
+        function <span class="apidocSignatureSpan">reds.</span>metaphoneArray
+        <span class="apidocSignatureSpan">(words)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">metaphoneArray = function (words){
+  var arr = [];
+  var constant;
+
+  if (!words) return arr;
+
+  for (var i = 0, len = words.length; i &lt; len; ++i) {
+    constant = metaphone(words[i]);
+    if (!~arr.indexOf(constant)) arr.push(constant);
+  }
+
+  return arr;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.metaphoneKeys" id="apidoc.element.reds.metaphoneKeys">
+        function <span class="apidocSignatureSpan">reds.</span>metaphoneKeys
+        <span class="apidocSignatureSpan">(key, words)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">metaphoneKeys = function (key, words){
+  return exports.metaphoneArray(words).map(function(c){
+    return key + ':word:' + c;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.metaphoneMap" id="apidoc.element.reds.metaphoneMap">
+        function <span class="apidocSignatureSpan">reds.</span>metaphoneMap
+        <span class="apidocSignatureSpan">(words)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">metaphoneMap = function (words){
+  var obj = {};
+  if (!words) return obj;
+  for (var i = 0, len = words.length; i &lt; len; ++i) {
+    obj[words[i]] = metaphone(words[i]);
+  }
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.stem" id="apidoc.element.reds.stem">
+        function <span class="apidocSignatureSpan">reds.</span>stem
+        <span class="apidocSignatureSpan">(words)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stem = function (words){
+  var ret = [];
+  if (!words) return ret;
+  for (var i = 0, len = words.length; i &lt; len; ++i) {
+    ret.push(stem(words[i]));
+  }
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.stripStopWords" id="apidoc.element.reds.stripStopWords">
+        function <span class="apidocSignatureSpan">reds.</span>stripStopWords
+        <span class="apidocSignatureSpan">(words)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripStopWords = function (words){
+  var ret = [];
+  if (!words) return ret;
+  for (var i = 0, len = words.length; i &lt; len; ++i) {
+    if (~stopwords.indexOf(words[i])) continue;
+    ret.push(words[i]);
+  }
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.words" id="apidoc.element.reds.words">
+        function <span class="apidocSignatureSpan">reds.</span>words
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">words = function (str){
+  return String(str).match(/\w+/g);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.Query" id="apidoc.module.reds.Query">module reds.Query</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Query.Query" id="apidoc.element.reds.Query.Query">
+        function <span class="apidocSignatureSpan">reds.</span>Query
+        <span class="apidocSignatureSpan">(str, search)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Query(str, search) {
+  this.str = str;
+  this.type('and');
+  this.search = search;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.Query.prototype" id="apidoc.module.reds.Query.prototype">module reds.Query.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Query.prototype.between" id="apidoc.element.reds.Query.prototype.between">
+        function <span class="apidocSignatureSpan">reds.Query.prototype.</span>between
+        <span class="apidocSignatureSpan">(start, stop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">between = function (start, stop){
+  this._start = start;
+  this._stop = stop;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Query.prototype.end" id="apidoc.element.reds.Query.prototype.end">
+        function <span class="apidocSignatureSpan">reds.Query.prototype.</span>end
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (fn){
+  var key = this.search.key;
+  var db = this.search.client;
+  var query = this.str;
+  var words = exports.stem(exports.stripStopWords(exports.words(query)));
+  var keys = exports.metaphoneKeys(key, words);
+  var type = this._type;
+  var start = this._start || 0;
+  var stop = this._stop || -1;
+
+  if (!keys.length) return fn(null, []);
+
+  var tkey = key + 'tmpkey';
+  db.multi([
+    [type, tkey, keys.length].concat(keys),
+    ['zrevrange', tkey, start, stop],
+    ['zremrangebyrank', tkey, start, stop],
+  ]).exec(function(err, ids) {
+    ids = ids[1];
+    fn(err, ids);
+  });
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+ To perform a query against reds simply invoke `Search#query()` with a string, and pass a callback, which receives an array of ids
+ when present, or an empty array otherwise.
+
+```js
+search
+.query(query = 'Tobi dollars')
+.<span class="apidocCodeKeywordSpan">end</span>(function(err, ids){
+  if (err) throw err;
+  console.log('Search results for "%s":', query);
+  ids.forEach(function(id){
+    console.log('  - %s', strs[id]);
+  });
+  process.exit();
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Query.prototype.type" id="apidoc.element.reds.Query.prototype.type">
+        function <span class="apidocSignatureSpan">reds.Query.prototype.</span>type
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">type = function (type){
+  this._type = types[type];
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+ We can tweak reds to perform a union by passing either "union" or "or" to `Search#type()` in `reds.search()`
+between `Search#query()` and `Search#end()`, indicating that _any_ of the constants computed may be present for the id to match.
+
+```js
+search
+.query(query = 'tobi dollars')
+.<span class="apidocCodeKeywordSpan">type</span>('or')
+.end(function(err, ids){
+  if (err) throw err;
+  console.log('Search results for "%s":', query);
+  ids.forEach(function(id){
+    console.log('  - %s', strs[id]);
+  });
+  process.exit();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.Query.prototype.between" id="apidoc.module.reds.Query.prototype.between">module reds.Query.prototype.between</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Query.prototype.between.between" id="apidoc.element.reds.Query.prototype.between.between">
+        function <span class="apidocSignatureSpan">reds.Query.prototype.</span>between
+        <span class="apidocSignatureSpan">(start, stop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">between = function (start, stop){
+  this._start = start;
+  this._stop = stop;
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.Query.prototype.end" id="apidoc.module.reds.Query.prototype.end">module reds.Query.prototype.end</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Query.prototype.end.end" id="apidoc.element.reds.Query.prototype.end.end">
+        function <span class="apidocSignatureSpan">reds.Query.prototype.</span>end
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (fn){
+  var key = this.search.key;
+  var db = this.search.client;
+  var query = this.str;
+  var words = exports.stem(exports.stripStopWords(exports.words(query)));
+  var keys = exports.metaphoneKeys(key, words);
+  var type = this._type;
+  var start = this._start || 0;
+  var stop = this._stop || -1;
+
+  if (!keys.length) return fn(null, []);
+
+  var tkey = key + 'tmpkey';
+  db.multi([
+    [type, tkey, keys.length].concat(keys),
+    ['zrevrange', tkey, start, stop],
+    ['zremrangebyrank', tkey, start, stop],
+  ]).exec(function(err, ids) {
+    ids = ids[1];
+    fn(err, ids);
+  });
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+ To perform a query against reds simply invoke `Search#query()` with a string, and pass a callback, which receives an array of ids
+ when present, or an empty array otherwise.
+
+```js
+search
+.query(query = 'Tobi dollars')
+.<span class="apidocCodeKeywordSpan">end</span>(function(err, ids){
+  if (err) throw err;
+  console.log('Search results for "%s":', query);
+  ids.forEach(function(id){
+    console.log('  - %s', strs[id]);
+  });
+  process.exit();
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.Query.prototype.type" id="apidoc.module.reds.Query.prototype.type">module reds.Query.prototype.type</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Query.prototype.type.type" id="apidoc.element.reds.Query.prototype.type.type">
+        function <span class="apidocSignatureSpan">reds.Query.prototype.</span>type
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">type = function (type){
+  this._type = types[type];
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+ We can tweak reds to perform a union by passing either "union" or "or" to `Search#type()` in `reds.search()`
+between `Search#query()` and `Search#end()`, indicating that _any_ of the constants computed may be present for the id to match.
+
+```js
+search
+.query(query = 'tobi dollars')
+.<span class="apidocCodeKeywordSpan">type</span>('or')
+.end(function(err, ids){
+  if (err) throw err;
+  console.log('Search results for "%s":', query);
+  ids.forEach(function(id){
+    console.log('  - %s', strs[id]);
+  });
+  process.exit();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.Search" id="apidoc.module.reds.Search">module reds.Search</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Search.Search" id="apidoc.element.reds.Search.Search">
+        function <span class="apidocSignatureSpan">reds.</span>Search
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Search(key) {
+  this.key = key;
+  this.client = exports.createClient();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.Search.prototype" id="apidoc.module.reds.Search.prototype">module reds.Search.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Search.prototype.index" id="apidoc.element.reds.Search.prototype.index">
+        function <span class="apidocSignatureSpan">reds.Search.prototype.</span>index
+        <span class="apidocSignatureSpan">(str, id, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">index = function (str, id, fn){
+  var key = this.key;
+  var db = this.client;
+  var words = exports.stem(exports.stripStopWords(exports.words(str)));
+  var counts = exports.countWords(words);
+  var map = exports.metaphoneMap(words);
+  var keys = Object.keys(map);
+
+  var cmds = [];
+  keys.forEach(function(word, i){
+    cmds.push(['zadd', key + ':word:' + map[word], counts[word], id]);
+    cmds.push(['zadd', key + ':object:' + id, counts[word], map[word]]);
+  });
+  db.multi(cmds).exec(fn || noop);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+strs.push('Tobi only wants $4');
+strs.push('Loki is really fat');
+strs.push('Loki, Jane, and Tobi are ferrets');
+strs.push('Manny is a cat');
+strs.push('Luna is a cat');
+strs.push('Mustachio is a cat');
+
+strs.forEach(function(str, i){ search.<span class="apidocCodeKeywordSpan">index</span>(str, i); });
+```
+
+ To perform a query against reds simply invoke `Search#query()` with a string, and pass a callback, which receives an array of ids
+ when present, or an empty array otherwise.
+
+```js
+search
+.query(query = 'Tobi dollars')
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Search.prototype.query" id="apidoc.element.reds.Search.prototype.query">
+        function <span class="apidocSignatureSpan">reds.Search.prototype.</span>query
+        <span class="apidocSignatureSpan">(query)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">query = function (query){
+  return new Query(query, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+strs.forEach(function(str, i){ search.index(str, i); });
+```
+
+ To perform a query against reds simply invoke `Search#query()` with a string, and pass a callback, which receives an array of ids
+ when present, or an empty array otherwise.
+
+```js
+search
+.<span class="apidocCodeKeywordSpan">query</span>(query = 'Tobi dollars')
+.end(function(err, ids){
+  if (err) throw err;
+  console.log('Search results for "%s":', query);
+  ids.forEach(function(id){
+    console.log('  - %s', strs[id]);
+  });
+  process.exit();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Search.prototype.remove" id="apidoc.element.reds.Search.prototype.remove">
+        function <span class="apidocSignatureSpan">reds.Search.prototype.</span>remove
+        <span class="apidocSignatureSpan">(id, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (id, fn){
+  fn = fn || noop;
+  var key = this.key;
+  var db = this.client;
+
+  db.zrevrangebyscore(key + ':object:' + id, '+inf', 0, function(err, constants){
+    if (err) return fn(err);
+    var multi = db.multi().del(key + ':object:' + id);
+    constants.forEach(function(c){
+      multi.zrem(key + ':word:' + c, id);
+    });
+    multi.exec(fn);
+  });
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+ Examples:
+
+```js
+var search = reds.createSearch('misc');
+search.index('Foo bar baz', 'abc');
+search.index('Foo bar', 'bcd');
+search.<span class="apidocCodeKeywordSpan">remove</span>('bcd');
+search.query('foo bar').end(function(err, ids){});
+```
+
+## About
+
+Currently reds strips stop words and applies the metaphone and porter stemmer algorithms to the remaining words before mapping the
+ constants in Redis sets. For example the following text:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.Search.prototype.index" id="apidoc.module.reds.Search.prototype.index">module reds.Search.prototype.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Search.prototype.index.index" id="apidoc.element.reds.Search.prototype.index.index">
+        function <span class="apidocSignatureSpan">reds.Search.prototype.</span>index
+        <span class="apidocSignatureSpan">(str, id, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">index = function (str, id, fn){
+  var key = this.key;
+  var db = this.client;
+  var words = exports.stem(exports.stripStopWords(exports.words(str)));
+  var counts = exports.countWords(words);
+  var map = exports.metaphoneMap(words);
+  var keys = Object.keys(map);
+
+  var cmds = [];
+  keys.forEach(function(word, i){
+    cmds.push(['zadd', key + ':word:' + map[word], counts[word], id]);
+    cmds.push(['zadd', key + ':object:' + id, counts[word], map[word]]);
+  });
+  db.multi(cmds).exec(fn || noop);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+strs.push('Tobi only wants $4');
+strs.push('Loki is really fat');
+strs.push('Loki, Jane, and Tobi are ferrets');
+strs.push('Manny is a cat');
+strs.push('Luna is a cat');
+strs.push('Mustachio is a cat');
+
+strs.forEach(function(str, i){ search.<span class="apidocCodeKeywordSpan">index</span>(str, i); });
+```
+
+ To perform a query against reds simply invoke `Search#query()` with a string, and pass a callback, which receives an array of ids
+ when present, or an empty array otherwise.
+
+```js
+search
+.query(query = 'Tobi dollars')
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.Search.prototype.query" id="apidoc.module.reds.Search.prototype.query">module reds.Search.prototype.query</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Search.prototype.query.query" id="apidoc.element.reds.Search.prototype.query.query">
+        function <span class="apidocSignatureSpan">reds.Search.prototype.</span>query
+        <span class="apidocSignatureSpan">(query)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">query = function (query){
+  return new Query(query, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+strs.forEach(function(str, i){ search.index(str, i); });
+```
+
+ To perform a query against reds simply invoke `Search#query()` with a string, and pass a callback, which receives an array of ids
+ when present, or an empty array otherwise.
+
+```js
+search
+.<span class="apidocCodeKeywordSpan">query</span>(query = 'Tobi dollars')
+.end(function(err, ids){
+  if (err) throw err;
+  console.log('Search results for "%s":', query);
+  ids.forEach(function(id){
+    console.log('  - %s', strs[id]);
+  });
+  process.exit();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.Search.prototype.remove" id="apidoc.module.reds.Search.prototype.remove">module reds.Search.prototype.remove</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.Search.prototype.remove.remove" id="apidoc.element.reds.Search.prototype.remove.remove">
+        function <span class="apidocSignatureSpan">reds.Search.prototype.</span>remove
+        <span class="apidocSignatureSpan">(id, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (id, fn){
+  fn = fn || noop;
+  var key = this.key;
+  var db = this.client;
+
+  db.zrevrangebyscore(key + ':object:' + id, '+inf', 0, function(err, constants){
+    if (err) return fn(err);
+    var multi = db.multi().del(key + ':object:' + id);
+    constants.forEach(function(c){
+      multi.zrem(key + ':word:' + c, id);
+    });
+    multi.exec(fn);
+  });
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+ Examples:
+
+```js
+var search = reds.createSearch('misc');
+search.index('Foo bar baz', 'abc');
+search.index('Foo bar', 'bcd');
+search.<span class="apidocCodeKeywordSpan">remove</span>('bcd');
+search.query('foo bar').end(function(err, ids){});
+```
+
+## About
+
+Currently reds strips stop words and applies the metaphone and porter stemmer algorithms to the remaining words before mapping the
+ constants in Redis sets. For example the following text:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.countWords" id="apidoc.module.reds.countWords">module reds.countWords</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.countWords.countWords" id="apidoc.element.reds.countWords.countWords">
+        function <span class="apidocSignatureSpan">reds.</span>countWords
+        <span class="apidocSignatureSpan">(words)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">countWords = function (words){
+  var obj = {};
+  if (!words) return obj;
+  for (var i = 0, len = words.length; i &lt; len; ++i) {
+    obj[words[i]] = (obj[words[i]] || 0) + 1;
+  }
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.createClient" id="apidoc.module.reds.createClient">module reds.createClient</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.createClient.createClient" id="apidoc.element.reds.createClient.createClient">
+        function <span class="apidocSignatureSpan">reds.</span>createClient
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createClient = function (){
+  return exports.client
+    || (exports.client = redis.createClient());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.createSearch" id="apidoc.module.reds.createSearch">module reds.createSearch</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.createSearch.createSearch" id="apidoc.element.reds.createSearch.createSearch">
+        function <span class="apidocSignatureSpan">reds.</span>createSearch
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createSearch = function (key){
+  if (!key) throw new Error('createSearch() requires a redis key for namespacing');
+  return new Search(key);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+      $ npm install reds
+
+## Example
+
+The first thing you'll want to do is create a `Search` instance, which allows you to pass a `key`, used for namespacing within
+ Redis so that you may have several searches in the same db.
+
+    var search = reds.<span class="apidocCodeKeywordSpan">createSearch</span>('pets');
+
+ reds acts against arbitrary numeric or string based ids, so you could utilize this library with essentially anything you wish,
+even combining data stores. The following example just uses an array for our "database", containing some strings, which
+ we add to reds by calling `Search#index()` padding the body of text and an id of some kind, in this case the index.
+
+```js
+var strs = [];
+strs.push('Tobi wants four dollars');
+strs.push('Tobi only wants $4');
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.metaphoneArray" id="apidoc.module.reds.metaphoneArray">module reds.metaphoneArray</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.metaphoneArray.metaphoneArray" id="apidoc.element.reds.metaphoneArray.metaphoneArray">
+        function <span class="apidocSignatureSpan">reds.</span>metaphoneArray
+        <span class="apidocSignatureSpan">(words)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">metaphoneArray = function (words){
+  var arr = [];
+  var constant;
+
+  if (!words) return arr;
+
+  for (var i = 0, len = words.length; i &lt; len; ++i) {
+    constant = metaphone(words[i]);
+    if (!~arr.indexOf(constant)) arr.push(constant);
+  }
+
+  return arr;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.metaphoneKeys" id="apidoc.module.reds.metaphoneKeys">module reds.metaphoneKeys</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.metaphoneKeys.metaphoneKeys" id="apidoc.element.reds.metaphoneKeys.metaphoneKeys">
+        function <span class="apidocSignatureSpan">reds.</span>metaphoneKeys
+        <span class="apidocSignatureSpan">(key, words)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">metaphoneKeys = function (key, words){
+  return exports.metaphoneArray(words).map(function(c){
+    return key + ':word:' + c;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.metaphoneMap" id="apidoc.module.reds.metaphoneMap">module reds.metaphoneMap</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.metaphoneMap.metaphoneMap" id="apidoc.element.reds.metaphoneMap.metaphoneMap">
+        function <span class="apidocSignatureSpan">reds.</span>metaphoneMap
+        <span class="apidocSignatureSpan">(words)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">metaphoneMap = function (words){
+  var obj = {};
+  if (!words) return obj;
+  for (var i = 0, len = words.length; i &lt; len; ++i) {
+    obj[words[i]] = metaphone(words[i]);
+  }
+  return obj;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.stem" id="apidoc.module.reds.stem">module reds.stem</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.stem.stem" id="apidoc.element.reds.stem.stem">
+        function <span class="apidocSignatureSpan">reds.</span>stem
+        <span class="apidocSignatureSpan">(words)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stem = function (words){
+  var ret = [];
+  if (!words) return ret;
+  for (var i = 0, len = words.length; i &lt; len; ++i) {
+    ret.push(stem(words[i]));
+  }
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.stripStopWords" id="apidoc.module.reds.stripStopWords">module reds.stripStopWords</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.stripStopWords.stripStopWords" id="apidoc.element.reds.stripStopWords.stripStopWords">
+        function <span class="apidocSignatureSpan">reds.</span>stripStopWords
+        <span class="apidocSignatureSpan">(words)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stripStopWords = function (words){
+  var ret = [];
+  if (!words) return ret;
+  for (var i = 0, len = words.length; i &lt; len; ++i) {
+    if (~stopwords.indexOf(words[i])) continue;
+    ret.push(words[i]);
+  }
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.reds.words" id="apidoc.module.reds.words">module reds.words</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.reds.words.words" id="apidoc.element.reds.words.words">
+        function <span class="apidocSignatureSpan">reds.</span>words
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">words = function (str){
+  return String(str).match(/\w+/g);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
