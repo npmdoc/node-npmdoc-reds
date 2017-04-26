@@ -49,9 +49,9 @@
 <h1>api documentation for
     <a
 
-        href="https://github.com/visionmedia/reds"
+        href="https://github.com/visionmedia/reds#readme"
 
-    >reds (v0.2.5)</a>
+    >reds (v1.0.0)</a>
 </h1>
 <h4>Redis search for node.js</h4>
 <div class="apidocSectionDiv"><a
@@ -72,63 +72,9 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.between">
-            function <span class="apidocSignatureSpan">reds.</span>Query.prototype.between
-            <span class="apidocSignatureSpan">(start, stop)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.end">
-            function <span class="apidocSignatureSpan">reds.</span>Query.prototype.end
-            <span class="apidocSignatureSpan">(fn)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.type">
-            function <span class="apidocSignatureSpan">reds.</span>Query.prototype.type
-            <span class="apidocSignatureSpan">(type)</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <a class="apidocElementLiA" href="#apidoc.element.reds.Search">
             function <span class="apidocSignatureSpan">reds.</span>Search
-            <span class="apidocSignatureSpan">(key)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.index">
-            function <span class="apidocSignatureSpan">reds.</span>Search.prototype.index
-            <span class="apidocSignatureSpan">(str, id, fn)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.query">
-            function <span class="apidocSignatureSpan">reds.</span>Search.prototype.query
-            <span class="apidocSignatureSpan">(query)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.remove">
-            function <span class="apidocSignatureSpan">reds.</span>Search.prototype.remove
-            <span class="apidocSignatureSpan">(id, fn)</span>
+            <span class="apidocSignatureSpan">(key, nlpProcess, writeIndex, removeIndex)</span>
             </a>
 
         </li>
@@ -155,7 +101,7 @@
 
             <a class="apidocElementLiA" href="#apidoc.element.reds.createSearch">
             function <span class="apidocSignatureSpan">reds.</span>createSearch
-            <span class="apidocSignatureSpan">(key)</span>
+            <span class="apidocSignatureSpan">(key, opts)</span>
             </a>
 
         </li>
@@ -189,6 +135,33 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.reds.nlpProcess">
+            function <span class="apidocSignatureSpan">reds.</span>nlpProcess
+            <span class="apidocSignatureSpan">(str, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.removeIndex">
+            function <span class="apidocSignatureSpan">reds.</span>removeIndex
+            <span class="apidocSignatureSpan">(db, id, key, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.setClient">
+            function <span class="apidocSignatureSpan">reds.</span>setClient
+            <span class="apidocSignatureSpan">(inClient)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.reds.stem">
             function <span class="apidocSignatureSpan">reds.</span>stem
             <span class="apidocSignatureSpan">(words)</span>
@@ -211,6 +184,21 @@
             function <span class="apidocSignatureSpan">reds.</span>words
             <span class="apidocSignatureSpan">(str)</span>
             </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.writeIndex">
+            function <span class="apidocSignatureSpan">reds.</span>writeIndex
+            <span class="apidocSignatureSpan">(db, id, key, nlpObj, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan"></span>reds</span>
 
         </li>
 
@@ -278,52 +266,13 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Query.prototype.between">module reds.Query.prototype.between</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.between.between">
-            function <span class="apidocSignatureSpan">reds.Query.prototype.</span>between
-            <span class="apidocSignatureSpan">(start, stop)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Query.prototype.end">module reds.Query.prototype.end</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.end.end">
-            function <span class="apidocSignatureSpan">reds.Query.prototype.</span>end
-            <span class="apidocSignatureSpan">(fn)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Query.prototype.type">module reds.Query.prototype.type</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.reds.Query.prototype.type.type">
-            function <span class="apidocSignatureSpan">reds.Query.prototype.</span>type
-            <span class="apidocSignatureSpan">(type)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
     <li class="apidocModuleLi"><a href="#apidoc.module.reds.Search">module reds.Search</a><ol>
 
         <li>
 
             <a class="apidocElementLiA" href="#apidoc.element.reds.Search.Search">
             function <span class="apidocSignatureSpan">reds.</span>Search
-            <span class="apidocSignatureSpan">(key)</span>
+            <span class="apidocSignatureSpan">(key, nlpProcess, writeIndex, removeIndex)</span>
             </a>
 
         </li>
@@ -361,157 +310,146 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Search.prototype.index">module reds.Search.prototype.index</a><ol>
+    <li class="apidocModuleLi"><a href="#apidoc.module.reds.reds">module reds.reds</a><ol>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.index.index">
-            function <span class="apidocSignatureSpan">reds.Search.prototype.</span>index
-            <span class="apidocSignatureSpan">(str, id, fn)</span>
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.Query">
+            function <span class="apidocSignatureSpan">reds.reds.</span>Query
+            <span class="apidocSignatureSpan">(str, search)</span>
             </a>
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Search.prototype.query">module reds.Search.prototype.query</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.query.query">
-            function <span class="apidocSignatureSpan">reds.Search.prototype.</span>query
-            <span class="apidocSignatureSpan">(query)</span>
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.Search">
+            function <span class="apidocSignatureSpan">reds.reds.</span>Search
+            <span class="apidocSignatureSpan">(key, nlpProcess, writeIndex, removeIndex)</span>
             </a>
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.Search.prototype.remove">module reds.Search.prototype.remove</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.reds.Search.prototype.remove.remove">
-            function <span class="apidocSignatureSpan">reds.Search.prototype.</span>remove
-            <span class="apidocSignatureSpan">(id, fn)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.countWords">module reds.countWords</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.reds.countWords.countWords">
-            function <span class="apidocSignatureSpan">reds.</span>countWords
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.countWords">
+            function <span class="apidocSignatureSpan">reds.reds.</span>countWords
             <span class="apidocSignatureSpan">(words)</span>
             </a>
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.createClient">module reds.createClient</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.reds.createClient.createClient">
-            function <span class="apidocSignatureSpan">reds.</span>createClient
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.createClient">
+            function <span class="apidocSignatureSpan">reds.reds.</span>createClient
             <span class="apidocSignatureSpan">()</span>
             </a>
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.createSearch">module reds.createSearch</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.reds.createSearch.createSearch">
-            function <span class="apidocSignatureSpan">reds.</span>createSearch
-            <span class="apidocSignatureSpan">(key)</span>
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.createSearch">
+            function <span class="apidocSignatureSpan">reds.reds.</span>createSearch
+            <span class="apidocSignatureSpan">(key, opts)</span>
             </a>
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.metaphoneArray">module reds.metaphoneArray</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.reds.metaphoneArray.metaphoneArray">
-            function <span class="apidocSignatureSpan">reds.</span>metaphoneArray
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.metaphoneArray">
+            function <span class="apidocSignatureSpan">reds.reds.</span>metaphoneArray
             <span class="apidocSignatureSpan">(words)</span>
             </a>
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.metaphoneKeys">module reds.metaphoneKeys</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.reds.metaphoneKeys.metaphoneKeys">
-            function <span class="apidocSignatureSpan">reds.</span>metaphoneKeys
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.metaphoneKeys">
+            function <span class="apidocSignatureSpan">reds.reds.</span>metaphoneKeys
             <span class="apidocSignatureSpan">(key, words)</span>
             </a>
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.metaphoneMap">module reds.metaphoneMap</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.reds.metaphoneMap.metaphoneMap">
-            function <span class="apidocSignatureSpan">reds.</span>metaphoneMap
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.metaphoneMap">
+            function <span class="apidocSignatureSpan">reds.reds.</span>metaphoneMap
             <span class="apidocSignatureSpan">(words)</span>
             </a>
 
         </li>
 
-    </ol></li>
+        <li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.stem">module reds.stem</a><ol>
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.nlpProcess">
+            function <span class="apidocSignatureSpan">reds.reds.</span>nlpProcess
+            <span class="apidocSignatureSpan">(str, key)</span>
+            </a>
+
+        </li>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.reds.stem.stem">
-            function <span class="apidocSignatureSpan">reds.</span>stem
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.removeIndex">
+            function <span class="apidocSignatureSpan">reds.reds.</span>removeIndex
+            <span class="apidocSignatureSpan">(db, id, key, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.setClient">
+            function <span class="apidocSignatureSpan">reds.reds.</span>setClient
+            <span class="apidocSignatureSpan">(inClient)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.stem">
+            function <span class="apidocSignatureSpan">reds.reds.</span>stem
             <span class="apidocSignatureSpan">(words)</span>
             </a>
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.stripStopWords">module reds.stripStopWords</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.reds.stripStopWords.stripStopWords">
-            function <span class="apidocSignatureSpan">reds.</span>stripStopWords
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.stripStopWords">
+            function <span class="apidocSignatureSpan">reds.reds.</span>stripStopWords
             <span class="apidocSignatureSpan">(words)</span>
             </a>
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.reds.words">module reds.words</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.reds.words.words">
-            function <span class="apidocSignatureSpan">reds.</span>words
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.words">
+            function <span class="apidocSignatureSpan">reds.reds.</span>words
             <span class="apidocSignatureSpan">(str)</span>
             </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.reds.reds.writeIndex">
+            function <span class="apidocSignatureSpan">reds.reds.</span>writeIndex
+            <span class="apidocSignatureSpan">(db, id, key, nlpObj, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">reds.reds.</span>version</span>
 
         </li>
 
@@ -541,156 +479,19 @@
 
 
     <h2>
-        <a href="#apidoc.element.reds.Query.prototype.between" id="apidoc.element.reds.Query.prototype.between">
-        function <span class="apidocSignatureSpan">reds.</span>Query.prototype.between
-        <span class="apidocSignatureSpan">(start, stop)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">Query.prototype.between = function (start, stop){
-  this._start = start;
-  this._stop = stop;
-  return this;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.reds.Query.prototype.end" id="apidoc.element.reds.Query.prototype.end">
-        function <span class="apidocSignatureSpan">reds.</span>Query.prototype.end
-        <span class="apidocSignatureSpan">(fn)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">Query.prototype.end = function (fn){
-  var key = this.search.key;
-  var db = this.search.client;
-  var query = this.str;
-  var words = exports.stem(exports.stripStopWords(exports.words(query)));
-  var keys = exports.metaphoneKeys(key, words);
-  var type = this._type;
-  var start = this._start || 0;
-  var stop = this._stop || -1;
-
-  if (!keys.length) return fn(null, []);
-
-  var tkey = key + &#x27;tmpkey&#x27;;
-  db.multi([
-    [type, tkey, keys.length].concat(keys),
-    [&#x27;zrevrange&#x27;, tkey, start, stop],
-    [&#x27;zremrangebyrank&#x27;, tkey, start, stop],
-  ]).exec(function(err, ids) {
-    ids = ids[1];
-    fn(err, ids);
-  });
-
-  return this;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.reds.Query.prototype.type" id="apidoc.element.reds.Query.prototype.type">
-        function <span class="apidocSignatureSpan">reds.</span>Query.prototype.type
-        <span class="apidocSignatureSpan">(type)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">Query.prototype.type = function (type){
-  this._type = types[type];
-  return this;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
         <a href="#apidoc.element.reds.Search" id="apidoc.element.reds.Search">
         function <span class="apidocSignatureSpan">reds.</span>Search
-        <span class="apidocSignatureSpan">(key)</span>
+        <span class="apidocSignatureSpan">(key, nlpProcess, writeIndex, removeIndex)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function Search(key) {
+    <li>description and source-code<pre class="apidocCodePre">function Search(key, nlpProcess, writeIndex, removeIndex) {
   this.key = key;
   this.client = exports.createClient();
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
 
-
-
-    <h2>
-        <a href="#apidoc.element.reds.Search.prototype.index" id="apidoc.element.reds.Search.prototype.index">
-        function <span class="apidocSignatureSpan">reds.</span>Search.prototype.index
-        <span class="apidocSignatureSpan">(str, id, fn)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">Search.prototype.index = function (str, id, fn){
-  var key = this.key;
-  var db = this.client;
-  var words = exports.stem(exports.stripStopWords(exports.words(str)));
-  var counts = exports.countWords(words);
-  var map = exports.metaphoneMap(words);
-  var keys = Object.keys(map);
-
-  var cmds = [];
-  keys.forEach(function(word, i){
-    cmds.push([&#x27;zadd&#x27;, key + &#x27;:word:&#x27; + map[word], counts[word], id]);
-    cmds.push([&#x27;zadd&#x27;, key + &#x27;:object:&#x27; + id, counts[word], map[word]]);
-  });
-  db.multi(cmds).exec(fn || noop);
-
-  return this;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.reds.Search.prototype.query" id="apidoc.element.reds.Search.prototype.query">
-        function <span class="apidocSignatureSpan">reds.</span>Search.prototype.query
-        <span class="apidocSignatureSpan">(query)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">Search.prototype.query = function (query){
-  return new Query(query, this);
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.reds.Search.prototype.remove" id="apidoc.element.reds.Search.prototype.remove">
-        function <span class="apidocSignatureSpan">reds.</span>Search.prototype.remove
-        <span class="apidocSignatureSpan">(id, fn)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">Search.prototype.remove = function (id, fn){
-  fn = fn || noop;
-  var key = this.key;
-  var db = this.client;
-
-  db.zrevrangebyscore(key + &#x27;:object:&#x27; + id, &#x27;+inf&#x27;, 0, function(err, constants){
-    if (err) return fn(err);
-    var multi = db.multi().del(key + &#x27;:object:&#x27; + id);
-    constants.forEach(function(c){
-      multi.zrem(key + &#x27;:word:&#x27; + c, id);
-    });
-    multi.exec(fn);
-  });
-
-  return this;
+  this.nlpProcess = nlpProcess;
+  this.writeIndex = writeIndex;
+  this.removeIndex = removeIndex;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -712,7 +513,21 @@
   }
   return obj;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Process indexing string into NLP components (words, counts, map, keys)
+ *
+ * @param {String} str
+ * @param {String} [key]
+ */
+exports.nlpProcess = function(str, key) {
+var words = exports.stem(exports.stripStopWords(exports.words(str)));
+var counts = exports.<span class="apidocCodeKeywordSpan">countWords</span>(words);
+var map = exports.metaphoneMap(words);
+var keys = Object.keys(map);
+//the key argument is only needed for removing items from the index
+//by not executing the `metaphoneKeys` function, it speeds up indexing a bit
+var metaphoneKeys = !key ? null : exports.metaphoneKeys(key, words)
+...</pre></li>
     </ul>
 
 
@@ -728,7 +543,23 @@
   return exports.client
     || (exports.client = redis.createClient());
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var connectionObj = require(argv.connection);
+var reds;
+var fs = require(&#x27;fs&#x27;);
+
+
+reds = require(&#x27;../&#x27;);
+
+reds.setClient(redis.<span class="apidocCodeKeywordSpan">createClient</span>(connectionObj));
+
+reds = reds.createSearch(&#x27;reds&#x27;);
+// test data
+
+var tiny = fs.readFileSync(&#x27;package.json&#x27;, &#x27;utf8&#x27;);
+tiny = Array(5).join(tiny);
+var small = fs.readFileSync(&#x27;Readme.md&#x27;, &#x27;utf8&#x27;);
+...</pre></li>
     </ul>
 
 
@@ -736,13 +567,19 @@
     <h2>
         <a href="#apidoc.element.reds.createSearch" id="apidoc.element.reds.createSearch">
         function <span class="apidocSignatureSpan">reds.</span>createSearch
-        <span class="apidocSignatureSpan">(key)</span>
+        <span class="apidocSignatureSpan">(key, opts)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">createSearch = function (key){
+    <li>description and source-code<pre class="apidocCodePre">createSearch = function (key, opts){
   if (!key) throw new Error(&#x27;createSearch() requires a redis key for namespacing&#x27;);
-  return new Search(key);
+
+  opts = !opts ? {} : opts;
+  opts.nlpProcess = !opts.nlpProcess ? exports.nlpProcess : opts.nlpProcess;
+  opts.writeIndex = !opts.writeIndex ? exports.writeIndex : opts.writeIndex;
+  opts.removeIndex = !opts.removeIndex ? exports.removeIndex : opts.removeIndex;
+
+  return new Search(key, opts.nlpProcess, opts.writeIndex, opts.removeIndex);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
@@ -751,7 +588,8 @@
 ## Example
 
 The first thing you&#x27;ll want to do is create a `Search` instance, which allows you to pass a `key`, used for namespacing within
- Redis so that you may have several searches in the same db.
+ Redis so that you may have several searches in the same db. You may specify your own [node_redis](https://github.com/NodeRedis/
+node_redis) instance with the `reds.setClient` function.
 
     var search = reds.<span class="apidocCodeKeywordSpan">createSearch</span>(&#x27;pets&#x27;);
 
@@ -788,7 +626,23 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
 
   return arr;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @param {String} key
+* @param {Array} words
+* @return {Array}
+* @api private
+*/
+
+exports.metaphoneKeys = function(key, words){
+ return exports.<span class="apidocCodeKeywordSpan">metaphoneArray</span>(words).map(function(c){
+   return key + &#x27;:word:&#x27; + c;
+ });
+};
+
+/**
+* Initialize a new `Query` with the given `str`
+* and `search` instance.
+...</pre></li>
     </ul>
 
 
@@ -805,7 +659,23 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
     return key + &#x27;:word:&#x27; + c;
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+exports.nlpProcess = function(str, key) {
+var words = exports.stem(exports.stripStopWords(exports.words(str)));
+var counts = exports.countWords(words);
+var map = exports.metaphoneMap(words);
+var keys = Object.keys(map);
+//the key argument is only needed for removing items from the index
+//by not executing the `metaphoneKeys` function, it speeds up indexing a bit
+var metaphoneKeys = !key ? null : exports.<span class="apidocCodeKeywordSpan">metaphoneKeys</span>(key, words)
+
+
+return {
+  words   : words,
+  counts  : counts,
+  map     : map,
+  keys    : keys,
+...</pre></li>
     </ul>
 
 
@@ -825,7 +695,138 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
   }
   return obj;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @param {String} str
+ * @param {String} [key]
+ */
+exports.nlpProcess = function(str, key) {
+var words = exports.stem(exports.stripStopWords(exports.words(str)));
+var counts = exports.countWords(words);
+var map = exports.<span class="apidocCodeKeywordSpan">metaphoneMap</span>(words);
+var keys = Object.keys(map);
+//the key argument is only needed for removing items from the index
+//by not executing the `metaphoneKeys` function, it speeds up indexing a bit
+var metaphoneKeys = !key ? null : exports.metaphoneKeys(key, words)
+
+
+return {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.nlpProcess" id="apidoc.element.reds.nlpProcess">
+        function <span class="apidocSignatureSpan">reds.</span>nlpProcess
+        <span class="apidocSignatureSpan">(str, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nlpProcess = function (str, key) {
+  var words = exports.stem(exports.stripStopWords(exports.words(str)));
+  var counts = exports.countWords(words);
+  var map = exports.metaphoneMap(words);
+  var keys = Object.keys(map);
+  //the key argument is only needed for removing items from the index
+  //by not executing the `metaphoneKeys` function, it speeds up indexing a bit
+  var metaphoneKeys = !key ? null : exports.metaphoneKeys(key, words)
+
+
+  return {
+    words   : words,
+    counts  : counts,
+    map     : map,
+    keys    : keys,
+    metaphoneKeys
+            : metaphoneKeys
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @api public
+ */
+
+Query.prototype.end = function(fn){
+var key = this.search.key;
+var db = this.search.client;
+var query = this.str;
+var nlpObj = this.search.<span class="apidocCodeKeywordSpan">nlpProcess</span>(query, key);
+var keys = nlpObj.metaphoneKeys;
+var type = this._type;
+var start = this._start || 0;
+var stop = this._stop || -1;
+
+if (!keys.length) return fn(null, []);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.removeIndex" id="apidoc.element.reds.removeIndex">
+        function <span class="apidocSignatureSpan">reds.</span>removeIndex
+        <span class="apidocSignatureSpan">(db, id, key, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeIndex = function (db, id, key, fn) {
+  db.zrevrangebyscore(key + &#x27;:object:&#x27; + id, &#x27;+inf&#x27;, 0, function(err, constants){
+    if (err) return fn(err);
+    var multi = db.multi().del(key + &#x27;:object:&#x27; + id);
+    constants.forEach(function(c){
+      multi.zrem(key + &#x27;:word:&#x27; + c, id);
+    });
+    multi.exec(fn);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+
+Search.prototype.remove = function(id, fn){
+ fn = fn || noop;
+ var key = this.key;
+ var db = this.client;
+
+ this.<span class="apidocCodeKeywordSpan">removeIndex</span>(db, id, key, fn);
+
+ return this;
+};
+
+/**
+* Perform a search on the given `query` returning
+* a `Query` instance.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.setClient" id="apidoc.element.reds.setClient">
+        function <span class="apidocSignatureSpan">reds.</span>setClient
+        <span class="apidocSignatureSpan">(inClient)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setClient = function (inClient) {
+  return exports.client = inClient;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var connectionObj = require(argv.connection);
+var reds;
+var fs = require(&#x27;fs&#x27;);
+
+
+reds = require(&#x27;../&#x27;);
+
+reds.<span class="apidocCodeKeywordSpan">setClient</span>(redis.createClient(connectionObj));
+
+reds = reds.createSearch(&#x27;reds&#x27;);
+// test data
+
+var tiny = fs.readFileSync(&#x27;package.json&#x27;, &#x27;utf8&#x27;);
+tiny = Array(5).join(tiny);
+var small = fs.readFileSync(&#x27;Readme.md&#x27;, &#x27;utf8&#x27;);
+...</pre></li>
     </ul>
 
 
@@ -845,7 +846,22 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
   }
   return ret;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Process indexing string into NLP components (words, counts, map, keys)
+ *
+ * @param {String} str
+ * @param {String} [key]
+ */
+exports.nlpProcess = function(str, key) {
+var words = exports.<span class="apidocCodeKeywordSpan">stem</span>(exports.stripStopWords(exports.words(str)));
+var counts = exports.countWords(words);
+var map = exports.metaphoneMap(words);
+var keys = Object.keys(map);
+//the key argument is only needed for removing items from the index
+//by not executing the `metaphoneKeys` function, it speeds up indexing a bit
+var metaphoneKeys = !key ? null : exports.metaphoneKeys(key, words)
+...</pre></li>
     </ul>
 
 
@@ -866,7 +882,22 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
   }
   return ret;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Process indexing string into NLP components (words, counts, map, keys)
+ *
+ * @param {String} str
+ * @param {String} [key]
+ */
+exports.nlpProcess = function(str, key) {
+var words = exports.stem(exports.<span class="apidocCodeKeywordSpan">stripStopWords</span>(exports.words(str)));
+var counts = exports.countWords(words);
+var map = exports.metaphoneMap(words);
+var keys = Object.keys(map);
+//the key argument is only needed for removing items from the index
+//by not executing the `metaphoneKeys` function, it speeds up indexing a bit
+var metaphoneKeys = !key ? null : exports.metaphoneKeys(key, words)
+...</pre></li>
     </ul>
 
 
@@ -881,8 +912,61 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
     <li>description and source-code<pre class="apidocCodePre">words = function (str){
   return String(str).match(/\w+/g);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Process indexing string into NLP components (words, counts, map, keys)
+ *
+ * @param {String} str
+ * @param {String} [key]
+ */
+exports.nlpProcess = function(str, key) {
+var words = exports.stem(exports.stripStopWords(exports.<span class="apidocCodeKeywordSpan">words</span>(str)));
+var counts = exports.countWords(words);
+var map = exports.metaphoneMap(words);
+var keys = Object.keys(map);
+//the key argument is only needed for removing items from the index
+//by not executing the `metaphoneKeys` function, it speeds up indexing a bit
+var metaphoneKeys = !key ? null : exports.metaphoneKeys(key, words)
+...</pre></li>
     </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.writeIndex" id="apidoc.element.reds.writeIndex">
+        function <span class="apidocSignatureSpan">reds.</span>writeIndex
+        <span class="apidocSignatureSpan">(db, id, key, nlpObj, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeIndex = function (db, id, key, nlpObj, fn) {
+  var cmds = [];
+  nlpObj.keys.forEach(function(word, i){
+    cmds.push([&#x27;zadd&#x27;, key + &#x27;:word:&#x27; + nlpObj.map[word], nlpObj.counts[word], id]);
+    cmds.push([&#x27;zadd&#x27;, key + &#x27;:object:&#x27; + id, nlpObj.counts[word], nlpObj.map[word]]);
+  });
+  db.multi(cmds).exec(fn || noop);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+
+Search.prototype.index = function(str, id, fn){
+ var key = this.key;
+ var db = this.client;
+ var nlpObj = this.nlpProcess(str);
+
+ this.<span class="apidocCodeKeywordSpan">writeIndex</span>(db, id, key, nlpObj, fn);
+
+ return this;
+};
+
+/**
+* Remove occurrences of `id` from the index.
+*
+...</pre></li>
+    </ul>
+
+
 
 
 
@@ -947,8 +1031,8 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
   var key = this.search.key;
   var db = this.search.client;
   var query = this.str;
-  var words = exports.stem(exports.stripStopWords(exports.words(query)));
-  var keys = exports.metaphoneKeys(key, words);
+  var nlpObj = this.search.nlpProcess(query, key);
+  var keys = nlpObj.metaphoneKeys;
   var type = this._type;
   var start = this._start || 0;
   var stop = this._stop || -1;
@@ -961,6 +1045,9 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
     [&#x27;zrevrange&#x27;, tkey, start, stop],
     [&#x27;zremrangebyrank&#x27;, tkey, start, stop],
   ]).exec(function(err, ids) {
+    if (err) {
+      return fn(err)
+    }
     ids = ids[1];
     fn(err, ids);
   });
@@ -1024,137 +1111,23 @@ search
 </div>
 
 <div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.Query.prototype.between" id="apidoc.module.reds.Query.prototype.between">module reds.Query.prototype.between</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.reds.Query.prototype.between.between" id="apidoc.element.reds.Query.prototype.between.between">
-        function <span class="apidocSignatureSpan">reds.Query.prototype.</span>between
-        <span class="apidocSignatureSpan">(start, stop)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">between = function (start, stop){
-  this._start = start;
-  this._stop = stop;
-  return this;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.Query.prototype.end" id="apidoc.module.reds.Query.prototype.end">module reds.Query.prototype.end</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.reds.Query.prototype.end.end" id="apidoc.element.reds.Query.prototype.end.end">
-        function <span class="apidocSignatureSpan">reds.Query.prototype.</span>end
-        <span class="apidocSignatureSpan">(fn)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">end = function (fn){
-  var key = this.search.key;
-  var db = this.search.client;
-  var query = this.str;
-  var words = exports.stem(exports.stripStopWords(exports.words(query)));
-  var keys = exports.metaphoneKeys(key, words);
-  var type = this._type;
-  var start = this._start || 0;
-  var stop = this._stop || -1;
-
-  if (!keys.length) return fn(null, []);
-
-  var tkey = key + &#x27;tmpkey&#x27;;
-  db.multi([
-    [type, tkey, keys.length].concat(keys),
-    [&#x27;zrevrange&#x27;, tkey, start, stop],
-    [&#x27;zremrangebyrank&#x27;, tkey, start, stop],
-  ]).exec(function(err, ids) {
-    ids = ids[1];
-    fn(err, ids);
-  });
-
-  return this;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-```
-
- To perform a query against reds simply invoke `Search#query()` with a string, and pass a callback, which receives an array of ids
- when present, or an empty array otherwise.
-
-```js
-search
-.query(query = &#x27;Tobi dollars&#x27;)
-.<span class="apidocCodeKeywordSpan">end</span>(function(err, ids){
-  if (err) throw err;
-  console.log(&#x27;Search results for &#x22;%s&#x22;:&#x27;, query);
-  ids.forEach(function(id){
-    console.log(&#x27;  - %s&#x27;, strs[id]);
-  });
-  process.exit();
-});
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.Query.prototype.type" id="apidoc.module.reds.Query.prototype.type">module reds.Query.prototype.type</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.reds.Query.prototype.type.type" id="apidoc.element.reds.Query.prototype.type.type">
-        function <span class="apidocSignatureSpan">reds.Query.prototype.</span>type
-        <span class="apidocSignatureSpan">(type)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">type = function (type){
-  this._type = types[type];
-  return this;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-```
-
- We can tweak reds to perform a union by passing either &#x22;union&#x22; or &#x22;or&#x22; to `Search#type()` in `reds.search()`
-between `Search#query()` and `Search#end()`, indicating that _any_ of the constants computed may be present for the id to match.
-
-```js
-search
-.query(query = &#x27;tobi dollars&#x27;)
-.<span class="apidocCodeKeywordSpan">type</span>(&#x27;or&#x27;)
-.end(function(err, ids){
-  if (err) throw err;
-  console.log(&#x27;Search results for &#x22;%s&#x22;:&#x27;, query);
-  ids.forEach(function(id){
-    console.log(&#x27;  - %s&#x27;, strs[id]);
-  });
-  process.exit();
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.reds.Search" id="apidoc.module.reds.Search">module reds.Search</a></h1>
 
 
     <h2>
         <a href="#apidoc.element.reds.Search.Search" id="apidoc.element.reds.Search.Search">
         function <span class="apidocSignatureSpan">reds.</span>Search
-        <span class="apidocSignatureSpan">(key)</span>
+        <span class="apidocSignatureSpan">(key, nlpProcess, writeIndex, removeIndex)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function Search(key) {
+    <li>description and source-code<pre class="apidocCodePre">function Search(key, nlpProcess, writeIndex, removeIndex) {
   this.key = key;
   this.client = exports.createClient();
+
+  this.nlpProcess = nlpProcess;
+  this.writeIndex = writeIndex;
+  this.removeIndex = removeIndex;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1176,17 +1149,9 @@ search
     <li>description and source-code<pre class="apidocCodePre">index = function (str, id, fn){
   var key = this.key;
   var db = this.client;
-  var words = exports.stem(exports.stripStopWords(exports.words(str)));
-  var counts = exports.countWords(words);
-  var map = exports.metaphoneMap(words);
-  var keys = Object.keys(map);
+  var nlpObj = this.nlpProcess(str);
 
-  var cmds = [];
-  keys.forEach(function(word, i){
-    cmds.push([&#x27;zadd&#x27;, key + &#x27;:word:&#x27; + map[word], counts[word], id]);
-    cmds.push([&#x27;zadd&#x27;, key + &#x27;:object:&#x27; + id, counts[word], map[word]]);
-  });
-  db.multi(cmds).exec(fn || noop);
+  this.writeIndex(db, id, key, nlpObj, fn);
 
   return this;
 }</pre></li>
@@ -1256,14 +1221,7 @@ search
   var key = this.key;
   var db = this.client;
 
-  db.zrevrangebyscore(key + &#x27;:object:&#x27; + id, &#x27;+inf&#x27;, 0, function(err, constants){
-    if (err) return fn(err);
-    var multi = db.multi().del(key + &#x27;:object:&#x27; + id);
-    constants.forEach(function(c){
-      multi.zrem(key + &#x27;:word:&#x27; + c, id);
-    });
-    multi.exec(fn);
-  });
+  this.removeIndex(db, id, key, fn);
 
   return this;
 }</pre></li>
@@ -1279,10 +1237,10 @@ search.<span class="apidocCodeKeywordSpan">remove</span>(&#x27;bcd&#x27;);
 search.query(&#x27;foo bar&#x27;).end(function(err, ids){});
 ```
 
-## About
+## Extending reds
 
-Currently reds strips stop words and applies the metaphone and porter stemmer algorithms to the remaining words before mapping the
- constants in Redis sets. For example the following text:
+Starting in 1.0.0, you can easily extend and expand how reds functions. When creating a new search, supply an object as the second
+ argument. There are currently three properties that can be configured:
 ...</pre></li>
     </ul>
 
@@ -1290,149 +1248,49 @@ Currently reds strips stop words and applies the metaphone and porter stemmer al
 </div>
 
 <div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.Search.prototype.index" id="apidoc.module.reds.Search.prototype.index">module reds.Search.prototype.index</a></h1>
+<h1><a href="#apidoc.module.reds.reds" id="apidoc.module.reds.reds">module reds.reds</a></h1>
 
 
     <h2>
-        <a href="#apidoc.element.reds.Search.prototype.index.index" id="apidoc.element.reds.Search.prototype.index.index">
-        function <span class="apidocSignatureSpan">reds.Search.prototype.</span>index
-        <span class="apidocSignatureSpan">(str, id, fn)</span>
+        <a href="#apidoc.element.reds.reds.Query" id="apidoc.element.reds.reds.Query">
+        function <span class="apidocSignatureSpan">reds.reds.</span>Query
+        <span class="apidocSignatureSpan">(str, search)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">index = function (str, id, fn){
-  var key = this.key;
-  var db = this.client;
-  var words = exports.stem(exports.stripStopWords(exports.words(str)));
-  var counts = exports.countWords(words);
-  var map = exports.metaphoneMap(words);
-  var keys = Object.keys(map);
-
-  var cmds = [];
-  keys.forEach(function(word, i){
-    cmds.push([&#x27;zadd&#x27;, key + &#x27;:word:&#x27; + map[word], counts[word], id]);
-    cmds.push([&#x27;zadd&#x27;, key + &#x27;:object:&#x27; + id, counts[word], map[word]]);
-  });
-  db.multi(cmds).exec(fn || noop);
-
-  return this;
+    <li>description and source-code<pre class="apidocCodePre">function Query(str, search) {
+  this.str = str;
+  this.type(&#x27;and&#x27;);
+  this.search = search;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-strs.push(&#x27;Tobi only wants $4&#x27;);
-strs.push(&#x27;Loki is really fat&#x27;);
-strs.push(&#x27;Loki, Jane, and Tobi are ferrets&#x27;);
-strs.push(&#x27;Manny is a cat&#x27;);
-strs.push(&#x27;Luna is a cat&#x27;);
-strs.push(&#x27;Mustachio is a cat&#x27;);
-
-strs.forEach(function(str, i){ search.<span class="apidocCodeKeywordSpan">index</span>(str, i); });
-```
-
- To perform a query against reds simply invoke `Search#query()` with a string, and pass a callback, which receives an array of ids
- when present, or an empty array otherwise.
-
-```js
-search
-.query(query = &#x27;Tobi dollars&#x27;)
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.Search.prototype.query" id="apidoc.module.reds.Search.prototype.query">module reds.Search.prototype.query</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.reds.Search.prototype.query.query" id="apidoc.element.reds.Search.prototype.query.query">
-        function <span class="apidocSignatureSpan">reds.Search.prototype.</span>query
-        <span class="apidocSignatureSpan">(query)</span>
+        <a href="#apidoc.element.reds.reds.Search" id="apidoc.element.reds.reds.Search">
+        function <span class="apidocSignatureSpan">reds.reds.</span>Search
+        <span class="apidocSignatureSpan">(key, nlpProcess, writeIndex, removeIndex)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">query = function (query){
-  return new Query(query, this);
+    <li>description and source-code<pre class="apidocCodePre">function Search(key, nlpProcess, writeIndex, removeIndex) {
+  this.key = key;
+  this.client = exports.createClient();
+
+  this.nlpProcess = nlpProcess;
+  this.writeIndex = writeIndex;
+  this.removeIndex = removeIndex;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-strs.forEach(function(str, i){ search.index(str, i); });
-```
-
- To perform a query against reds simply invoke `Search#query()` with a string, and pass a callback, which receives an array of ids
- when present, or an empty array otherwise.
-
-```js
-search
-.<span class="apidocCodeKeywordSpan">query</span>(query = &#x27;Tobi dollars&#x27;)
-.end(function(err, ids){
-  if (err) throw err;
-  console.log(&#x27;Search results for &#x22;%s&#x22;:&#x27;, query);
-  ids.forEach(function(id){
-    console.log(&#x27;  - %s&#x27;, strs[id]);
-  });
-  process.exit();
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.Search.prototype.remove" id="apidoc.module.reds.Search.prototype.remove">module reds.Search.prototype.remove</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.reds.Search.prototype.remove.remove" id="apidoc.element.reds.Search.prototype.remove.remove">
-        function <span class="apidocSignatureSpan">reds.Search.prototype.</span>remove
-        <span class="apidocSignatureSpan">(id, fn)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">remove = function (id, fn){
-  fn = fn || noop;
-  var key = this.key;
-  var db = this.client;
-
-  db.zrevrangebyscore(key + &#x27;:object:&#x27; + id, &#x27;+inf&#x27;, 0, function(err, constants){
-    if (err) return fn(err);
-    var multi = db.multi().del(key + &#x27;:object:&#x27; + id);
-    constants.forEach(function(c){
-      multi.zrem(key + &#x27;:word:&#x27; + c, id);
-    });
-    multi.exec(fn);
-  });
-
-  return this;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
- Examples:
-
-```js
-var search = reds.createSearch(&#x27;misc&#x27;);
-search.index(&#x27;Foo bar baz&#x27;, &#x27;abc&#x27;);
-search.index(&#x27;Foo bar&#x27;, &#x27;bcd&#x27;);
-search.<span class="apidocCodeKeywordSpan">remove</span>(&#x27;bcd&#x27;);
-search.query(&#x27;foo bar&#x27;).end(function(err, ids){});
-```
-
-## About
-
-Currently reds strips stop words and applies the metaphone and porter stemmer algorithms to the remaining words before mapping the
- constants in Redis sets. For example the following text:
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.countWords" id="apidoc.module.reds.countWords">module reds.countWords</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.reds.countWords.countWords" id="apidoc.element.reds.countWords.countWords">
-        function <span class="apidocSignatureSpan">reds.</span>countWords
+        <a href="#apidoc.element.reds.reds.countWords" id="apidoc.element.reds.reds.countWords">
+        function <span class="apidocSignatureSpan">reds.reds.</span>countWords
         <span class="apidocSignatureSpan">(words)</span>
         </a>
     </h2>
@@ -1445,19 +1303,28 @@ Currently reds strips stop words and applies the metaphone and porter stemmer al
   }
   return obj;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Process indexing string into NLP components (words, counts, map, keys)
+ *
+ * @param {String} str
+ * @param {String} [key]
+ */
+exports.nlpProcess = function(str, key) {
+var words = exports.stem(exports.stripStopWords(exports.words(str)));
+var counts = exports.<span class="apidocCodeKeywordSpan">countWords</span>(words);
+var map = exports.metaphoneMap(words);
+var keys = Object.keys(map);
+//the key argument is only needed for removing items from the index
+//by not executing the `metaphoneKeys` function, it speeds up indexing a bit
+var metaphoneKeys = !key ? null : exports.metaphoneKeys(key, words)
+...</pre></li>
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.createClient" id="apidoc.module.reds.createClient">module reds.createClient</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.reds.createClient.createClient" id="apidoc.element.reds.createClient.createClient">
-        function <span class="apidocSignatureSpan">reds.</span>createClient
+        <a href="#apidoc.element.reds.reds.createClient" id="apidoc.element.reds.reds.createClient">
+        function <span class="apidocSignatureSpan">reds.reds.</span>createClient
         <span class="apidocSignatureSpan">()</span>
         </a>
     </h2>
@@ -1466,26 +1333,43 @@ Currently reds strips stop words and applies the metaphone and porter stemmer al
   return exports.client
     || (exports.client = redis.createClient());
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var connectionObj = require(argv.connection);
+var reds;
+var fs = require(&#x27;fs&#x27;);
+
+
+reds = require(&#x27;../&#x27;);
+
+reds.setClient(redis.<span class="apidocCodeKeywordSpan">createClient</span>(connectionObj));
+
+reds = reds.createSearch(&#x27;reds&#x27;);
+// test data
+
+var tiny = fs.readFileSync(&#x27;package.json&#x27;, &#x27;utf8&#x27;);
+tiny = Array(5).join(tiny);
+var small = fs.readFileSync(&#x27;Readme.md&#x27;, &#x27;utf8&#x27;);
+...</pre></li>
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.createSearch" id="apidoc.module.reds.createSearch">module reds.createSearch</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.reds.createSearch.createSearch" id="apidoc.element.reds.createSearch.createSearch">
-        function <span class="apidocSignatureSpan">reds.</span>createSearch
-        <span class="apidocSignatureSpan">(key)</span>
+        <a href="#apidoc.element.reds.reds.createSearch" id="apidoc.element.reds.reds.createSearch">
+        function <span class="apidocSignatureSpan">reds.reds.</span>createSearch
+        <span class="apidocSignatureSpan">(key, opts)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">createSearch = function (key){
+    <li>description and source-code<pre class="apidocCodePre">createSearch = function (key, opts){
   if (!key) throw new Error(&#x27;createSearch() requires a redis key for namespacing&#x27;);
-  return new Search(key);
+
+  opts = !opts ? {} : opts;
+  opts.nlpProcess = !opts.nlpProcess ? exports.nlpProcess : opts.nlpProcess;
+  opts.writeIndex = !opts.writeIndex ? exports.writeIndex : opts.writeIndex;
+  opts.removeIndex = !opts.removeIndex ? exports.removeIndex : opts.removeIndex;
+
+  return new Search(key, opts.nlpProcess, opts.writeIndex, opts.removeIndex);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
@@ -1494,7 +1378,8 @@ Currently reds strips stop words and applies the metaphone and porter stemmer al
 ## Example
 
 The first thing you&#x27;ll want to do is create a `Search` instance, which allows you to pass a `key`, used for namespacing within
- Redis so that you may have several searches in the same db.
+ Redis so that you may have several searches in the same db. You may specify your own [node_redis](https://github.com/NodeRedis/
+node_redis) instance with the `reds.setClient` function.
 
     var search = reds.<span class="apidocCodeKeywordSpan">createSearch</span>(&#x27;pets&#x27;);
 
@@ -1510,15 +1395,10 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.metaphoneArray" id="apidoc.module.reds.metaphoneArray">module reds.metaphoneArray</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.reds.metaphoneArray.metaphoneArray" id="apidoc.element.reds.metaphoneArray.metaphoneArray">
-        function <span class="apidocSignatureSpan">reds.</span>metaphoneArray
+        <a href="#apidoc.element.reds.reds.metaphoneArray" id="apidoc.element.reds.reds.metaphoneArray">
+        function <span class="apidocSignatureSpan">reds.reds.</span>metaphoneArray
         <span class="apidocSignatureSpan">(words)</span>
         </a>
     </h2>
@@ -1536,19 +1416,30 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
 
   return arr;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @param {String} key
+* @param {Array} words
+* @return {Array}
+* @api private
+*/
+
+exports.metaphoneKeys = function(key, words){
+ return exports.<span class="apidocCodeKeywordSpan">metaphoneArray</span>(words).map(function(c){
+   return key + &#x27;:word:&#x27; + c;
+ });
+};
+
+/**
+* Initialize a new `Query` with the given `str`
+* and `search` instance.
+...</pre></li>
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.metaphoneKeys" id="apidoc.module.reds.metaphoneKeys">module reds.metaphoneKeys</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.reds.metaphoneKeys.metaphoneKeys" id="apidoc.element.reds.metaphoneKeys.metaphoneKeys">
-        function <span class="apidocSignatureSpan">reds.</span>metaphoneKeys
+        <a href="#apidoc.element.reds.reds.metaphoneKeys" id="apidoc.element.reds.reds.metaphoneKeys">
+        function <span class="apidocSignatureSpan">reds.reds.</span>metaphoneKeys
         <span class="apidocSignatureSpan">(key, words)</span>
         </a>
     </h2>
@@ -1558,19 +1449,30 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
     return key + &#x27;:word:&#x27; + c;
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+exports.nlpProcess = function(str, key) {
+var words = exports.stem(exports.stripStopWords(exports.words(str)));
+var counts = exports.countWords(words);
+var map = exports.metaphoneMap(words);
+var keys = Object.keys(map);
+//the key argument is only needed for removing items from the index
+//by not executing the `metaphoneKeys` function, it speeds up indexing a bit
+var metaphoneKeys = !key ? null : exports.<span class="apidocCodeKeywordSpan">metaphoneKeys</span>(key, words)
+
+
+return {
+  words   : words,
+  counts  : counts,
+  map     : map,
+  keys    : keys,
+...</pre></li>
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.metaphoneMap" id="apidoc.module.reds.metaphoneMap">module reds.metaphoneMap</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.reds.metaphoneMap.metaphoneMap" id="apidoc.element.reds.metaphoneMap.metaphoneMap">
-        function <span class="apidocSignatureSpan">reds.</span>metaphoneMap
+        <a href="#apidoc.element.reds.reds.metaphoneMap" id="apidoc.element.reds.reds.metaphoneMap">
+        function <span class="apidocSignatureSpan">reds.reds.</span>metaphoneMap
         <span class="apidocSignatureSpan">(words)</span>
         </a>
     </h2>
@@ -1583,19 +1485,145 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
   }
   return obj;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @param {String} str
+ * @param {String} [key]
+ */
+exports.nlpProcess = function(str, key) {
+var words = exports.stem(exports.stripStopWords(exports.words(str)));
+var counts = exports.countWords(words);
+var map = exports.<span class="apidocCodeKeywordSpan">metaphoneMap</span>(words);
+var keys = Object.keys(map);
+//the key argument is only needed for removing items from the index
+//by not executing the `metaphoneKeys` function, it speeds up indexing a bit
+var metaphoneKeys = !key ? null : exports.metaphoneKeys(key, words)
+
+
+return {
+...</pre></li>
     </ul>
 
 
-</div>
 
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.stem" id="apidoc.module.reds.stem">module reds.stem</a></h1>
+    <h2>
+        <a href="#apidoc.element.reds.reds.nlpProcess" id="apidoc.element.reds.reds.nlpProcess">
+        function <span class="apidocSignatureSpan">reds.reds.</span>nlpProcess
+        <span class="apidocSignatureSpan">(str, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nlpProcess = function (str, key) {
+  var words = exports.stem(exports.stripStopWords(exports.words(str)));
+  var counts = exports.countWords(words);
+  var map = exports.metaphoneMap(words);
+  var keys = Object.keys(map);
+  //the key argument is only needed for removing items from the index
+  //by not executing the `metaphoneKeys` function, it speeds up indexing a bit
+  var metaphoneKeys = !key ? null : exports.metaphoneKeys(key, words)
+
+
+  return {
+    words   : words,
+    counts  : counts,
+    map     : map,
+    keys    : keys,
+    metaphoneKeys
+            : metaphoneKeys
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @api public
+ */
+
+Query.prototype.end = function(fn){
+var key = this.search.key;
+var db = this.search.client;
+var query = this.str;
+var nlpObj = this.search.<span class="apidocCodeKeywordSpan">nlpProcess</span>(query, key);
+var keys = nlpObj.metaphoneKeys;
+var type = this._type;
+var start = this._start || 0;
+var stop = this._stop || -1;
+
+if (!keys.length) return fn(null, []);
+...</pre></li>
+    </ul>
+
 
 
     <h2>
-        <a href="#apidoc.element.reds.stem.stem" id="apidoc.element.reds.stem.stem">
-        function <span class="apidocSignatureSpan">reds.</span>stem
+        <a href="#apidoc.element.reds.reds.removeIndex" id="apidoc.element.reds.reds.removeIndex">
+        function <span class="apidocSignatureSpan">reds.reds.</span>removeIndex
+        <span class="apidocSignatureSpan">(db, id, key, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeIndex = function (db, id, key, fn) {
+  db.zrevrangebyscore(key + &#x27;:object:&#x27; + id, &#x27;+inf&#x27;, 0, function(err, constants){
+    if (err) return fn(err);
+    var multi = db.multi().del(key + &#x27;:object:&#x27; + id);
+    constants.forEach(function(c){
+      multi.zrem(key + &#x27;:word:&#x27; + c, id);
+    });
+    multi.exec(fn);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+
+Search.prototype.remove = function(id, fn){
+ fn = fn || noop;
+ var key = this.key;
+ var db = this.client;
+
+ this.<span class="apidocCodeKeywordSpan">removeIndex</span>(db, id, key, fn);
+
+ return this;
+};
+
+/**
+* Perform a search on the given `query` returning
+* a `Query` instance.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.reds.setClient" id="apidoc.element.reds.reds.setClient">
+        function <span class="apidocSignatureSpan">reds.reds.</span>setClient
+        <span class="apidocSignatureSpan">(inClient)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setClient = function (inClient) {
+  return exports.client = inClient;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var connectionObj = require(argv.connection);
+var reds;
+var fs = require(&#x27;fs&#x27;);
+
+
+reds = require(&#x27;../&#x27;);
+
+reds.<span class="apidocCodeKeywordSpan">setClient</span>(redis.createClient(connectionObj));
+
+reds = reds.createSearch(&#x27;reds&#x27;);
+// test data
+
+var tiny = fs.readFileSync(&#x27;package.json&#x27;, &#x27;utf8&#x27;);
+tiny = Array(5).join(tiny);
+var small = fs.readFileSync(&#x27;Readme.md&#x27;, &#x27;utf8&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.reds.stem" id="apidoc.element.reds.reds.stem">
+        function <span class="apidocSignatureSpan">reds.reds.</span>stem
         <span class="apidocSignatureSpan">(words)</span>
         </a>
     </h2>
@@ -1608,19 +1636,29 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
   }
   return ret;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Process indexing string into NLP components (words, counts, map, keys)
+ *
+ * @param {String} str
+ * @param {String} [key]
+ */
+exports.nlpProcess = function(str, key) {
+var words = exports.<span class="apidocCodeKeywordSpan">stem</span>(exports.stripStopWords(exports.words(str)));
+var counts = exports.countWords(words);
+var map = exports.metaphoneMap(words);
+var keys = Object.keys(map);
+//the key argument is only needed for removing items from the index
+//by not executing the `metaphoneKeys` function, it speeds up indexing a bit
+var metaphoneKeys = !key ? null : exports.metaphoneKeys(key, words)
+...</pre></li>
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.stripStopWords" id="apidoc.module.reds.stripStopWords">module reds.stripStopWords</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.reds.stripStopWords.stripStopWords" id="apidoc.element.reds.stripStopWords.stripStopWords">
-        function <span class="apidocSignatureSpan">reds.</span>stripStopWords
+        <a href="#apidoc.element.reds.reds.stripStopWords" id="apidoc.element.reds.reds.stripStopWords">
+        function <span class="apidocSignatureSpan">reds.reds.</span>stripStopWords
         <span class="apidocSignatureSpan">(words)</span>
         </a>
     </h2>
@@ -1634,19 +1672,29 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
   }
   return ret;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Process indexing string into NLP components (words, counts, map, keys)
+ *
+ * @param {String} str
+ * @param {String} [key]
+ */
+exports.nlpProcess = function(str, key) {
+var words = exports.stem(exports.<span class="apidocCodeKeywordSpan">stripStopWords</span>(exports.words(str)));
+var counts = exports.countWords(words);
+var map = exports.metaphoneMap(words);
+var keys = Object.keys(map);
+//the key argument is only needed for removing items from the index
+//by not executing the `metaphoneKeys` function, it speeds up indexing a bit
+var metaphoneKeys = !key ? null : exports.metaphoneKeys(key, words)
+...</pre></li>
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.reds.words" id="apidoc.module.reds.words">module reds.words</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.reds.words.words" id="apidoc.element.reds.words.words">
-        function <span class="apidocSignatureSpan">reds.</span>words
+        <a href="#apidoc.element.reds.reds.words" id="apidoc.element.reds.reds.words">
+        function <span class="apidocSignatureSpan">reds.reds.</span>words
         <span class="apidocSignatureSpan">(str)</span>
         </a>
     </h2>
@@ -1654,8 +1702,61 @@ strs.push(&#x27;Tobi only wants $4&#x27;);
     <li>description and source-code<pre class="apidocCodePre">words = function (str){
   return String(str).match(/\w+/g);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Process indexing string into NLP components (words, counts, map, keys)
+ *
+ * @param {String} str
+ * @param {String} [key]
+ */
+exports.nlpProcess = function(str, key) {
+var words = exports.stem(exports.stripStopWords(exports.<span class="apidocCodeKeywordSpan">words</span>(str)));
+var counts = exports.countWords(words);
+var map = exports.metaphoneMap(words);
+var keys = Object.keys(map);
+//the key argument is only needed for removing items from the index
+//by not executing the `metaphoneKeys` function, it speeds up indexing a bit
+var metaphoneKeys = !key ? null : exports.metaphoneKeys(key, words)
+...</pre></li>
     </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.reds.reds.writeIndex" id="apidoc.element.reds.reds.writeIndex">
+        function <span class="apidocSignatureSpan">reds.reds.</span>writeIndex
+        <span class="apidocSignatureSpan">(db, id, key, nlpObj, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeIndex = function (db, id, key, nlpObj, fn) {
+  var cmds = [];
+  nlpObj.keys.forEach(function(word, i){
+    cmds.push([&#x27;zadd&#x27;, key + &#x27;:word:&#x27; + nlpObj.map[word], nlpObj.counts[word], id]);
+    cmds.push([&#x27;zadd&#x27;, key + &#x27;:object:&#x27; + id, nlpObj.counts[word], nlpObj.map[word]]);
+  });
+  db.multi(cmds).exec(fn || noop);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+
+Search.prototype.index = function(str, id, fn){
+ var key = this.key;
+ var db = this.client;
+ var nlpObj = this.nlpProcess(str);
+
+ this.<span class="apidocCodeKeywordSpan">writeIndex</span>(db, id, key, nlpObj, fn);
+
+ return this;
+};
+
+/**
+* Remove occurrences of `id` from the index.
+*
+...</pre></li>
+    </ul>
+
+
 
 
 </div>
